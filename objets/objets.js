@@ -19,12 +19,10 @@ let student1 = {
 
 for(grade of student1.grades)
 {
-    student1.average = student1.average + grade;
+    student1.average+=grade;
 }
-
-student1.average = student1.average / students1.grade.length;
-
-console.log(student1.average);
+student1.average=student1.average/student1.grades.length;
+console.log(student1);
 
 /* Exo 3 */
 
@@ -46,7 +44,12 @@ let students = [
     },
 ];
 
-for(eachStudent of students)
+for(student of students)
 {
-    console.log(eachStudent);
+    console.log(`${student.name} is ${student.age} years old and has a average of ${student.average}. `);
+}
+
+for(let i = 0; i < students.length; i++)
+{
+    console.log(`${students[i].name} is ${students[i].age} years old and has a average of ${students[i].average}. `);
 }
